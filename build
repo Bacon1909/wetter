@@ -1,0 +1,10 @@
+#!/bin/bash
+
+tagname=wetter-app:latest
+
+#clean up
+rm -rf ./dist
+
+
+#Build
+npm run build && docker build -t $tagname .
